@@ -1,6 +1,6 @@
-# AutoFeature: Automated Feature Engineering Framework
+# Augment: Automated Feature Engineering Framework
 
-AutoFeature is a comprehensive Python framework for automated feature engineering in machine learning projects. It streamlines the feature engineering process by automatically generating, selecting, and evaluating features to improve model performance.
+Augment is a comprehensive Python framework for automated feature engineering in machine learning projects. It streamlines the feature engineering process by automatically generating, selecting, and evaluating features to improve model performance.
 
 ## Key Features
 
@@ -33,13 +33,13 @@ AutoFeature is a comprehensive Python framework for automated feature engineerin
 
 ```bash
 # Install from PyPI
-pip install autofeature
+pip install Augment
 
 # Install with additional NLP dependencies
-pip install autofeature[nlp]
+pip install Augment[nlp]
 
 # Install development dependencies
-pip install autofeature[dev]
+pip install Augment[dev]
 ```
 
 ## Quick Start
@@ -47,7 +47,7 @@ pip install autofeature[dev]
 ```python
 import pandas as pd
 from sklearn.model_selection import train_test_split
-from autofeature.pipeline import FeaturePipeline, build_generation_pipeline
+from Augment.pipeline import FeaturePipeline, build_generation_pipeline
 
 # Load your data
 data = pd.read_csv('your_data.csv')
@@ -93,7 +93,7 @@ print(f"Selected {stats['selected_features']} features in {stats['selection_time
 You can customize the feature generation process by configuring each transformer:
 
 ```python
-from autofeature.feature_generation import (
+from Augment.feature_generation import (
     MathematicalTransformer, 
     InteractionTransformer, 
     TimeBasedTransformer
@@ -125,10 +125,10 @@ pipeline = FeaturePipeline(
 
 ## Feature Selection Methods
 
-AutoFeature provides several feature selection methods:
+Augment provides several feature selection methods:
 
 ```python
-from autofeature.feature_selection import (
+from Augment.feature_selection import (
     FilterSelector,
     WrapperSelector,
     EmbeddedSelector,
@@ -167,7 +167,7 @@ genetic_selector = GeneticSelector(
 Evaluate the impact of features on model performance:
 
 ```python
-from autofeature.feature_evaluation import FeatureEvaluator
+from Augment.feature_evaluation import FeatureEvaluator
 import matplotlib.pyplot as plt
 
 # Create evaluator
